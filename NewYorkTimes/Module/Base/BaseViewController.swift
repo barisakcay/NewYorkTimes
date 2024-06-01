@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, LoadingShowable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,4 +22,6 @@ class BaseViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
+    
+    
 }
