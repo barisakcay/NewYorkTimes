@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol HomeViewControllerProtocol {
+protocol HomeViewControllerProtocol: AnyObject {
     
     func setupTableView()
     func reloadData()
@@ -32,6 +32,7 @@ final class HomeViewController: BaseViewController {
 }
 
 extension HomeViewController: HomeViewControllerProtocol {
+    
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -39,7 +40,9 @@ extension HomeViewController: HomeViewControllerProtocol {
     }
     
     func reloadData() {
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func showLoadingView() {
@@ -51,7 +54,9 @@ extension HomeViewController: HomeViewControllerProtocol {
     }
     
     func showError(_ message: String) {
-        showAlert(with: "Error", message: message)
+        DispatchQueue.main.async {
+            self.showAlert(with: "Oops", message: "Bir terslikle karşılaşıldı")
+        }
     }
     
     func setTitle(_ title: String) {
@@ -69,10 +74,17 @@ extension HomeViewController: UITableViewDelegate {
 extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        presenter.numberOfItems()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        
+        let cell = tableView.dequeueCell(with: NewsCell.self, for: indexPath)
+        
+        if let news = presenter.news(indexPath) {
+            cell.cellPresenter = NewsCellPresenter(view: cell, news: news)
+        }
+        
+        return cell
     }
 }

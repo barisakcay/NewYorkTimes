@@ -24,6 +24,6 @@ struct Multimedia: Decodable {
 enum Format: String, Codable {
     case largeThumbnail = "Large Thumbnail"
     case mediumThreeByTwo440 = "mediumThreeByTwo440"
-    case superJumbo = "SuperJumbo"
-    case threeByTwoSmallAt2x = "threeByTwoSmallAt2x"
+    case superJumbo = "Super Jumbo"
+    case threeByTwoSmallAt2X = "threeByTwoSmallAt2X"
 }

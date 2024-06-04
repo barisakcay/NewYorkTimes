@@ -66,14 +66,17 @@ extension API {
         var request = URLRequest(url: url)
         
         if let params = parameters {
+            
             if method == .get {
-                guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else { return nil }
+                guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
+                    return nil
+                }
                 
                 let queryItems = params.map {
                     URLQueryItem(name: $0.key, value: String(describing: $0.value))
                 }
                 
-                urlComponents.queryItems = (urlComponents.queryItems ?? [] + queryItems)
+                urlComponents.queryItems = (urlComponents.queryItems ?? []) + queryItems
                 
                 guard let newUrl = urlComponents.url else { return nil }
                 

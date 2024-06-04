@@ -19,7 +19,7 @@ enum NetworkError: Error {
         case .invalidRequest:
             return "Invalid Request"
         case .requestFailed:
-            return "Request Failed, plase check your internet connection and try again."
+            return "Request Failed, please check your internet connection and try again"
         case .jsonDecodedError:
             return "Failed to parse json data"
         case .customError(let error):

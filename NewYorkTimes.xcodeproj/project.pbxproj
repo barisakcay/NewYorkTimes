@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		602AF0112C0F88B50031CAB7 /* NewsCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602AF0102C0F88B50031CAB7 /* NewsCellPresenter.swift */; };
+		602AF0132C0F8DB50031CAB7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602AF0122C0F8DB50031CAB7 /* ServiceManager.swift */; };
 		60D6776E2C08B0D900421EF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D6776D2C08B0D900421EF5 /* AppDelegate.swift */; };
 		60D677702C08B0D900421EF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D6776F2C08B0D900421EF5 /* SceneDelegate.swift */; };
 		60D677722C08B0D900421EF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D677712C08B0D900421EF5 /* ViewController.swift */; };
@@ -59,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		602AF0102C0F88B50031CAB7 /* NewsCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellPresenter.swift; sourceTree = "<group>"; };
+		602AF0122C0F8DB50031CAB7 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		60D6776A2C08B0D900421EF5 /* NewYorkTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewYorkTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D6776D2C08B0D900421EF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60D6776F2C08B0D900421EF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -279,6 +283,7 @@
 				60D677C12C09446300421EF5 /* Reachability.swift */,
 				60D677C32C09485C00421EF5 /* API.swift */,
 				60D677C52C0949C400421EF5 /* NetworkManager.swift */,
+				602AF0122C0F8DB50031CAB7 /* ServiceManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 			children = (
 				60F904772C0B75390022135F /* NewsCell.swift */,
 				60F904782C0B75390022135F /* NewsCell.xib */,
+				602AF0102C0F88B50031CAB7 /* NewsCellPresenter.swift */,
 			);
 			path = HomeCell;
 			sourceTree = "<group>";
@@ -448,6 +454,7 @@
 				60D677B32C08BBA800421EF5 /* SplashPresenter.swift in Sources */,
 				60D6776E2C08B0D900421EF5 /* AppDelegate.swift in Sources */,
 				60D677C22C09446300421EF5 /* Reachability.swift in Sources */,
+				602AF0132C0F8DB50031CAB7 /* ServiceManager.swift in Sources */,
 				60D677BD2C093F5B00421EF5 /* ClassName.swift in Sources */,
 				60D677C62C0949C400421EF5 /* NetworkManager.swift in Sources */,
 				60D677AF2C08BAB300421EF5 /* SplashViewController.swift in Sources */,
@@ -457,6 +464,7 @@
 				60D677702C08B0D900421EF5 /* SceneDelegate.swift in Sources */,
 				60D677C42C09485C00421EF5 /* API.swift in Sources */,
 				60D677BF2C093FFF00421EF5 /* UITableView.swift in Sources */,
+				602AF0112C0F88B50031CAB7 /* NewsCellPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

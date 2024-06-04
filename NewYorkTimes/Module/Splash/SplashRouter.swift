@@ -5,7 +5,7 @@
 //  Created by Baris Akcay on 30.05.2024.
 //
 
-import Foundation
+import UIKit
 
 enum SplashRoutes {
     case home
@@ -42,8 +42,10 @@ extension SplashRouter: SplashRouterProtocol {
     func navigate(_ route: SplashRoutes) {
         switch route {
         case .home:
-            print("You have reached to home page!")
-            break
+            guard let window = viewController?.view.window else { return }
+            let homeVC = HomeRouter.createModule()
+            let navigationController = UINavigationController(rootViewController: homeVC)
+            window.rootViewController = navigationController
         }
     }
 }
