@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		602AF0112C0F88B50031CAB7 /* NewsCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602AF0102C0F88B50031CAB7 /* NewsCellPresenter.swift */; };
 		602AF0132C0F8DB50031CAB7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602AF0122C0F8DB50031CAB7 /* ServiceManager.swift */; };
+		602AF0162C0FE03F0031CAB7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602AF0142C0FE03F0031CAB7 /* DetailViewController.swift */; };
+		602AF0172C0FE03F0031CAB7 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602AF0152C0FE03F0031CAB7 /* DetailViewController.xib */; };
+		602AF0192C0FE08E0031CAB7 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602AF0182C0FE08E0031CAB7 /* DetailInteractor.swift */; };
+		602AF01B2C0FE0B40031CAB7 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602AF01A2C0FE0B40031CAB7 /* DetailPresenter.swift */; };
+		602AF01D2C0FE0E30031CAB7 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602AF01C2C0FE0E30031CAB7 /* DetailRouter.swift */; };
+		602AF01F2C0FEBD40031CAB7 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602AF01E2C0FEBD40031CAB7 /* ImageDownloader.swift */; };
 		60D6776E2C08B0D900421EF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D6776D2C08B0D900421EF5 /* AppDelegate.swift */; };
 		60D677702C08B0D900421EF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D6776F2C08B0D900421EF5 /* SceneDelegate.swift */; };
 		60D677722C08B0D900421EF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D677712C08B0D900421EF5 /* ViewController.swift */; };
@@ -63,6 +69,12 @@
 /* Begin PBXFileReference section */
 		602AF0102C0F88B50031CAB7 /* NewsCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellPresenter.swift; sourceTree = "<group>"; };
 		602AF0122C0F8DB50031CAB7 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		602AF0142C0FE03F0031CAB7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		602AF0152C0FE03F0031CAB7 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		602AF0182C0FE08E0031CAB7 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		602AF01A2C0FE0B40031CAB7 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		602AF01C2C0FE0E30031CAB7 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		602AF01E2C0FEBD40031CAB7 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		60D6776A2C08B0D900421EF5 /* NewYorkTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewYorkTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D6776D2C08B0D900421EF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60D6776F2C08B0D900421EF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -273,6 +285,11 @@
 		60D677A92C08B6B700421EF5 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				602AF0142C0FE03F0031CAB7 /* DetailViewController.swift */,
+				602AF0152C0FE03F0031CAB7 /* DetailViewController.xib */,
+				602AF0182C0FE08E0031CAB7 /* DetailInteractor.swift */,
+				602AF01A2C0FE0B40031CAB7 /* DetailPresenter.swift */,
+				602AF01C2C0FE0E30031CAB7 /* DetailRouter.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -284,6 +301,7 @@
 				60D677C32C09485C00421EF5 /* API.swift */,
 				60D677C52C0949C400421EF5 /* NetworkManager.swift */,
 				602AF0122C0F8DB50031CAB7 /* ServiceManager.swift */,
+				602AF01E2C0FEBD40031CAB7 /* ImageDownloader.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -412,6 +430,7 @@
 			files = (
 				60F9047A2C0B75390022135F /* NewsCell.xib in Resources */,
 				60D6777A2C08B0DC00421EF5 /* Assets.xcassets in Resources */,
+				602AF0172C0FE03F0031CAB7 /* DetailViewController.xib in Resources */,
 				60D6777D2C08B0DC00421EF5 /* Base in Resources */,
 				60D677C92C0A249000421EF5 /* HomeViewController.xib in Resources */,
 				60D677752C08B0D900421EF5 /* Base in Resources */,
@@ -443,6 +462,7 @@
 				60D677B92C093E5300421EF5 /* LoadingShowable.swift in Sources */,
 				60D677CC2C0A24B600421EF5 /* HomeInteractor.swift in Sources */,
 				60D677AB2C08B6E000421EF5 /* BaseViewController.swift in Sources */,
+				602AF0192C0FE08E0031CAB7 /* DetailInteractor.swift in Sources */,
 				60D677CE2C0A260100421EF5 /* HomePresenter.swift in Sources */,
 				60F904792C0B75390022135F /* NewsCell.swift in Sources */,
 				60D677B12C08BB3900421EF5 /* SplashInteractor.swift in Sources */,
@@ -453,13 +473,17 @@
 				60D677B72C093CDE00421EF5 /* LoadingView.swift in Sources */,
 				60D677B32C08BBA800421EF5 /* SplashPresenter.swift in Sources */,
 				60D6776E2C08B0D900421EF5 /* AppDelegate.swift in Sources */,
+				602AF0162C0FE03F0031CAB7 /* DetailViewController.swift in Sources */,
 				60D677C22C09446300421EF5 /* Reachability.swift in Sources */,
+				602AF01F2C0FEBD40031CAB7 /* ImageDownloader.swift in Sources */,
 				602AF0132C0F8DB50031CAB7 /* ServiceManager.swift in Sources */,
 				60D677BD2C093F5B00421EF5 /* ClassName.swift in Sources */,
 				60D677C62C0949C400421EF5 /* NetworkManager.swift in Sources */,
+				602AF01B2C0FE0B40031CAB7 /* DetailPresenter.swift in Sources */,
 				60D677AF2C08BAB300421EF5 /* SplashViewController.swift in Sources */,
 				60D677782C08B0D900421EF5 /* NewYorkTimes.xcdatamodeld in Sources */,
 				60D677D02C0A263E00421EF5 /* HomeRouter.swift in Sources */,
+				602AF01D2C0FE0E30031CAB7 /* DetailRouter.swift in Sources */,
 				60D677B52C08BBD200421EF5 /* SplashRouter.swift in Sources */,
 				60D677702C08B0D900421EF5 /* SceneDelegate.swift in Sources */,
 				60D677C42C09485C00421EF5 /* API.swift in Sources */,

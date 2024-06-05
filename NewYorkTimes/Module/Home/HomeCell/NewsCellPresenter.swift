@@ -29,7 +29,15 @@ final class NewsCellPresenter {
 extension NewsCellPresenter: NewsCellPresenterProtocol {
     
     func load() {
-        //TODO: ImageLoad
+        DispatchQueue.main.async {
+            ImageDownloader.shared.image(news: self.news, format: .threeByTwoSmallAt2X) { [weak self] data, error in
+                guard let self else { return }
+                if let data {
+                    guard let image = UIImage(data: data) else { return }
+                    self.view?.setImage(image)
+                }
+            }
+        }
         view?.setTitleLabel(news.title ?? "")
         view?.setAuthorLabel(news.byline ?? "")
     }

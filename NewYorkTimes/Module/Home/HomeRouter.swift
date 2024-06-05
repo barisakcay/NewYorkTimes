@@ -8,7 +8,7 @@
 import Foundation
 
 enum HomeRoutes {
-    case detail//(source: News?)
+    case detail(source: News?)
 }
 
 protocol HomeRouterProtocol {
@@ -36,5 +36,11 @@ extension HomeRouter: HomeRouterProtocol {
     
     func navigate(_ route: HomeRoutes) {
         
+        switch route {
+        case .detail(let source):
+            let detailVC = DetailRouter.createModule()
+            detailVC.source = source
+            viewController?.navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
 }

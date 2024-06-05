@@ -43,7 +43,8 @@ extension HomePresenter: HomePresenterProtocol {
     }
     
     func didSelectRowAt(_ indexPath: IndexPath) {
-        //TODO: Navigate to detail
+        let source = news[indexPath.row]
+        router.navigate(.detail(source: source))
     }
     
     func numberOfItems() -> Int {

@@ -55,7 +55,7 @@ extension HomeViewController: HomeViewControllerProtocol {
     
     func showError(_ message: String) {
         DispatchQueue.main.async {
-            self.showAlert(with: "Oops", message: "Bir terslikle karşılaşıldı")
+            self.showAlert(with: "Oops!", message: "Something went wrong")
         }
     }
     
